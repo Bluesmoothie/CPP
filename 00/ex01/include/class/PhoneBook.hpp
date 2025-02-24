@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:56:42 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/12 18:32:38 by ygille           ###   ########.fr       */
+/*   Updated: 2025/02/24 09:28:23 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	PhoneBook();
 	~PhoneBook();
 	void add_contact(std::string first_name, std::string last_name, std::string nickname, std::string number, std::string secret);
-	void print_contacts();
+	void print_summary();
 	void print_contact(int index);
 };
 

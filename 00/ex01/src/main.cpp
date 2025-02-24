@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:51:51 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/20 17:45:58 by ygille           ###   ########.fr       */
+/*   Updated: 2025/02/24 11:39:45 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int	main(void)
 
 	std::cout << M_CLEAR;
 	std::cout << M_WELCOME << std::endl;
-	choose_op(book);
+	choose_op(&book);
 	std::cout << M_GOODBYE << std::endl;
 	return (0);
 }
 
-void	choose_op(PhoneBook book)
+void	choose_op(PhoneBook *book)
 {
 	std::string	op;
 
@@ -39,7 +39,7 @@ void	choose_op(PhoneBook book)
 	while (op.compare("EXIT") != 0);
 }
 
-void	op_add(PhoneBook book)
+void	op_add(PhoneBook *book)
 {
 	std::string	first_name;
 	std::string	last_name;
@@ -58,15 +58,22 @@ void	op_add(PhoneBook book)
 	std::cin >> number;
 	std::cout << "Darkest secret :";
 	std::cin >> secret;
-	book.add_contact(first_name, last_name, nickname, number, secret);
+	if (first_name.size() == 0 || last_name.size() == 0 || nickname.size() == 0 || number.size() == 0 || secret.size() == 0)
+	{
+		std::cout << "Error : arguments can't be blank" << std::endl;
+		return ;
+	}
+	book->add_contact(first_name, last_name, nickname, number, secret);
 }
 
-void	op_search(PhoneBook book)
+void	op_search(PhoneBook *book)
 {
-	int	index;
+	std::string	input;
+	int			index;
 
-	book.print_contacts();
+	book->print_summary();
 	std::cout << "Choose contact index" << std::endl << "Index :";
-	std::cin >> index;
-	book.print_contact(index);
+	std::cin >> input;
+	index = std::atoi(input.c_str());
+	book->print_contact(index);
 }
