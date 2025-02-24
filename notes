@@ -1,0 +1,161 @@
+cplusplus.com
+
+C++98 plus simple mais permet moins de choses que C++11
+
+===================================NAMESPACES===================================
+
+
+namespaces		regroupement de fonctions et symboles mêmes repartis sur plusieurs fichiers
+
+int		g_myVariable = -1;
+
+namespace myNamespace {
+	void	myFunction();
+	int		g_myVariable = 0;
+}
+
+namespace myOtherNamespace {
+	void	myOtherFunction();
+	int		g_myVariable = 2;		// même nom mais namespace différent, donc pas de conflit
+}
+
+namespace myAlias = myNamespace;	// alias de namespace
+
+// Utilisation
+myNamespace::myFunction();
+myAlias::myFunction();				// alias = même fonction
+i = myNamespace::g_myVariable;
+::g_myVariable;						// ==-1
+g_myVariable;						// ==-1
+
+namespace std::						// contient les fonctions de la librairie standard
+
+
+
+===================================STDIO STREAMS===================================
+
+#include <iostream>
+
+
+std::cin							// input stream
+std::cout							// output stream
+
+<<									// insertion operator
+>>									// extraction operator
+
+std::endl							// end of line permet la compatibilité avec tous les systèmes
+
+std::cout << "Hello, world!" << std::endl;	// = std::cout << "Hello, world!\n";
+std::cin >> i;								// récupère la valeur de i depuis l'entrée standard
+std::cout << "i = " << i << std::endl;		// affiche la valeur de i
+
+
+
+===================================CLASS & INSTANCE===================================
+
+
+Myclass.class.hpp					// header de définition de la class Myclass
+
+class	Myclass	{
+
+public:
+
+	Myclass( void );				// constructeur
+	~Myclass( void );				// destructeur		constructeurs et destructeurs n'ont pas de type de return
+};
+
+Sample.class.cpp
+
+#include "Myclass.class.hpp"
+
+Myclass::Myclass(void) {
+
+	return ;						// pas obligatoire
+}
+
+Myclass::~Myclass(void) {
+	
+	return ;						// pas obligatoire
+}
+
+
+Sample	instance;					// creer une variable instance de type Sample en appelant le constructeur
+// le destructeur est automatiquement appelé lorsque la fonction return
+
+
+
+
+this								// fait référence à l'instance courante
+this->foo							// foo de l'instance courante (this est un pointeur)
+
+
+
+===================================INIT LIST===================================
+
+
+
+Myclass.class.hpp	
+
+class	Myclass	{
+
+public:
+
+	int		a;
+	char	b;
+	float	c;
+
+	Myclass(int pa, char pb, float pc);				
+	~Myclass( void );		
+
+	OtherFunction (void) const;				// ici le const veux dire que cette fonction ne modifie pas les attributs de sa classe
+											// bonne habitude à prendre askip
+};
+
+Sample.class.cpp
+
+#include "Myclass.class.hpp"
+
+Myclass::Myclass(int pa, char pb, float pc) : a(pa), b(pb), c(pc) {		// liste d'initialisation initialise les attributs avec les valeurs
+
+	return ;					
+}
+
+Myclass::~Myclass(void) {
+	
+	return ;						
+}
+
+l'initialisation ressemble à ca
+Sample	instance(10, 'a', 36.42f);
+
+
+
+===================================VISIBILITY===================================
+
+
+
+public:				// attributs accessibles depuis l'extérieur
+
+private:			// attributs innaccessibles depuis l'extérieur de la class
+
+int	_privateFoo;	// convention de nommage répandue
+
+
+
+===================================STRUCT & CLASS===================================
+
+
+
+Fonctionne quasiment pareil en c++
+Constructeur, destructeur etc..
+Excepté qu'une structure est par défaut public et une class par défaut privée //seule diff
+
+
+
+===================================ACCESSORS===================================
+
+
+
+void	getFoo(void) const;			//fonctions accessors pour get et set une variable privée
+// ex une fonction qui s'assure que la valeur est dans les limites définies
+int		setFoo(int v);

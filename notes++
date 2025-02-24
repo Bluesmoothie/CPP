@@ -1,0 +1,17 @@
+standard c++98
+-Wall -Wextra -Werror -std=c++98
+
+NomDeClasse.hpp/NomDeClasse.h, NomDeClasse.cpp, ou NomDeClasse.tpp
+
+toute la librairie standard
+
+c++11 et boost interdits
+printf alloc free interdits
+
+using namespace <ns_name> friend interdits
+
+new pour malloc
+
+vos classes devront se conformer à la forme canonique, dite de Coplien
+fonction implémentée dans un fichier d’en-tête interdit
+include guards
