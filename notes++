@@ -11,6 +11,7 @@ printf alloc free interdits
 using namespace <ns_name> friend interdits
 
 new pour malloc
+delete pour free
 
 vos classes devront se conformer à la forme canonique, dite de Coplien
 fonction implémentée dans un fichier d’en-tête interdit
