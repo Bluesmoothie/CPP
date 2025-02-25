@@ -1,0 +1,32 @@
+Pointeurs
+Déclarés avec l'astérisque (*) : int* ptr;
+
+Peuvent être réassignés pour pointer vers différentes adresses
+
+Peuvent être null (nullptr)
+
+Nécessitent une déréférencement (*) pour accéder à la valeur pointée
+
+Supportent l'arithmétique de pointeurs
+
+Références
+Déclarées avec l'esperluette (&) : int& ref = var;
+
+Doivent être initialisées à la déclaration
+
+Ne peuvent pas être null
+
+Agissent comme un alias direct de la variable référencée
+
+Ne peuvent pas être réassignées après l'initialisation
+
+Principales différences
+Initialisation : Les pointeurs peuvent être déclarés sans initialisation, les références doivent être initialisées à la déclaration1.
+
+Réassignation : Les pointeurs peuvent être réassignés, les références non1.
+
+Valeur nulle : Les pointeurs peuvent être null, les références ne le peuvent pas2.
+
+Arithmétique : Les pointeurs supportent l'arithmétique, les références non1.
+
+Syntaxe d'accès : Les pointeurs nécessitent une déréférencement (*), les références s'utilisent directement1.
