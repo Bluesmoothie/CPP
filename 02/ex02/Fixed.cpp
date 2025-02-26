@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 10:39:14 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 12:11:25 by ygille           ###   ########.fr       */
+/*   Updated: 2025/02/26 12:16:22 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,8 +174,6 @@ Fixed	&Fixed::max(Fixed &first, Fixed &second)
 
 const Fixed	&Fixed::max(const Fixed &first, const Fixed &second)
 {
-	if (first.toFloat() >= second.toFloat())
-		return (first);
 	else
 		return (second);
 }
