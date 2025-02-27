@@ -19,6 +19,8 @@ SRC_FILES		=	main			\
 					Animal			\
 					Cat				\
 					Dog				\
+					WrongAnimal		\
+					WrongCat		\
 
 SRC 			= 	$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ 			= 	$(addprefix $(BUILD_DIR), $(addsuffix .o, $(SRC_FILES)))

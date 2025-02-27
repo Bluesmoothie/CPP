@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:44:06 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 10:59:06 by ygille           ###   ########.fr       */
+/*   Updated: 2025/02/27 11:13:11 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Animal::~Animal()
 	std::cout << "Default destructor called for Animal" << std::endl;
 }
 
-void	Animal::makeSound()
+void	Animal::makeSound() const
 {
 	if (!this->type.compare("Cat"))
 		std::cout << "Miaou" << std::endl;
@@ -47,4 +47,9 @@ void	Animal::makeSound()
 		std::cout << "Wouaf" << std::endl;
 	else
 		std::cout << "..." << std::endl;
+}
+
+std::string	Animal::getType() const
+{
+	return (this->type);
 }
