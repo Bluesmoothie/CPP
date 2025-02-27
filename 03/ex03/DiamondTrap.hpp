@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 13:53:55 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 15:33:52 by ygille           ###   ########.fr       */
+/*   Updated: 2025/02/27 09:36:28 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 #include <iostream>
 
 #include "FragTrap.hpp"
-#include "ScavTrap.cpp"
+#include "ScavTrap.hpp"
 
-class	DiamondTrap : public FragTrap, public ScavTrap
+class	DiamondTrap : public ScavTrap, public FragTrap
 {
 public:
 
