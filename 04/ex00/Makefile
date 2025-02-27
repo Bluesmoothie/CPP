@@ -10,7 +10,7 @@ CXXFLAGS		=	-Wall -Wextra -Werror -std=c++98 -MMD -MP $(INCLUDE)
 #			COMMON
 
 BUILD_DIR		=	.build/
-SRC_DIR			=	./
+SRC_DIR			=	src/
 INCLUDE 		=	-Iinclude/ -Iinclude/class
 
 #			SRC
