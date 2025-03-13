@@ -1,0 +1,9 @@
+*.o
+*.d
+Zombie
+Human
+sed
+test.txt
+test.txt.replace
+harl
+harlFilter
