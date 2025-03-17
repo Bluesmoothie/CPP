@@ -6,13 +6,13 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 10:39:14 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 11:46:45 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/17 13:37:53 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-const int	frac = 8;
+const int	Fixed::frac = 8;
 
 Fixed::Fixed() : value(0)
 {
