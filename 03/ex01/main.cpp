@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 12:20:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 13:00:57 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/19 21:06:38 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ int	main()
     Clappy.takeDamage(10);
 
     Scavy.attack("someone");
-    Scavy.takeDamage(5);
+    Scavy.takeDamage(500);
     Scavy.beRepaired(5);
     Scavy.takeDamage(10);
     Scavy.guardGate();
+	Scavy.guardGate();
 	
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 12:20:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 13:06:19 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/19 21:16:57 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	main()
     Scavy.takeDamage(5);
     Scavy.beRepaired(5);
     Scavy.takeDamage(10);
+    Scavy.highFivesGuys();
+	Scavy.takeDamage(100);
     Scavy.highFivesGuys();
 	
 	return (0);

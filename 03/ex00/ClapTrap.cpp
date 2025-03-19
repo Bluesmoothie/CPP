@@ -6,13 +6,13 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 12:20:52 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 12:36:56 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/19 21:00:01 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hit(10), _energy(10), _attack(0)
+ClapTrap::ClapTrap(const std::string name) : _name(name), _hit(10), _energy(10), _attack(0)
 {
 	std::cout << "Constructor called" << std::endl;
 }
@@ -39,21 +39,38 @@ ClapTrap::~ClapTrap()
 
 void	ClapTrap::attack(const std::string& target)
 {
-	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack << " points of damage!" << std::endl;
+	if (this->_energy > 0 && this->_hit > 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack << " points of damage!" << std::endl;
+		this->_energy--;
+	}
+	else
+		std::cout << "Claptrap " << this->_name << " can't attack" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->_name << " take " << amount << " damage" <<  std::endl;
-	this->_energy -= amount;
-	if (this->_energy <= 0)
-		std::cout << "ClapTrap " << this->_name << " is dead" <<  std::endl;
+	if (this->_hit > 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " take " << amount << " damage" <<  std::endl;
+		this->_hit -= amount;
+		if (this->_energy <= 0)
+			std::cout << "ClapTrap " << this->_name << " is dead" <<  std::endl;
+	}
+	else
+		std::cout << "ClapTrap " << this->_name << " already dead" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << "ClapTrap " << this->_name << " get " << amount << " points of energy" << std::endl;
-	this->_energy += amount;
+	if (this->_energy > 0 && this->_hit > 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " get " << amount << " hit points" << std::endl;
+		this->_hit += amount;
+		this->_energy--;
+	}
+	else
+		std::cout << "ClapTrap " << this->_name << " can't be repaired" << std::endl;
 }
 
 

@@ -6,18 +6,18 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 12:52:45 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 13:06:41 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/19 21:16:09 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name)
+FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 {
+    std::cout << "FragTrap constructor called" << std::endl;
 	this->_hit = 100;
     this->_energy = 100;
     this->_attack = 30;
-    std::cout << "FragTrap constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
@@ -40,5 +40,8 @@ FragTrap::~FragTrap()
 
 void	FragTrap::highFivesGuys()
 {
-	std::cout << "FragTrap high five guys!" << std::endl;
+	if (this->_hit > 0)
+		std::cout << "FragTrap " << this->_name << " high five guys!" << std::endl;
+	else
+		std::cout << "FragTrap " << this->_name << " is dead" << std::endl;
 }

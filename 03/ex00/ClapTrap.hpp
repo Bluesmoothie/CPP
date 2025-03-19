@@ -6,12 +6,9 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 12:20:50 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/26 12:33:09 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/19 20:58:55 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
 
 #pragma once
 
@@ -22,7 +19,7 @@ class	ClapTrap
 {
 public:
 
-	ClapTrap(std::string name);
+	ClapTrap(const std::string name);
 	ClapTrap(const ClapTrap& other);
 	ClapTrap& operator=(const ClapTrap& other);
 	~ClapTrap();
@@ -39,5 +36,3 @@ private:
 	int			_attack;
 
 };
-
-#endif
