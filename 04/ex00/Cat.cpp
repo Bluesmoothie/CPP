@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 09:46:43 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 13:00:06 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/20 18:03:42 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/20 18:33:26 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,21 @@
 
 Cat::Cat() : Animal("Cat")
 {
-	std::cout << "Default constructor called for Cat" << std::endl;
+
 }
 
-Cat::Cat(const Cat& other) : Animal(other.type)
+Cat::Cat(const Cat& other)
 {
-	std::cout << "Default copy constructor called for Cat" << std::endl;
+	this->_type = other._type;
 }
 
 Cat& Cat::operator=(const Cat& other)
 {
-	std::cout << "Assignement operator called for Cat" << std::endl;
-	this->type = other.type;
+	this->_type = other._type;
 	return (*this);
 }
 
 Cat::~Cat()
 {
-	std::cout << "Default destructor called for Cat" << std::endl;
-}
 
-void	Cat::makeSound() const
-{
-	std::cout << "Miaou" << std::endl;
 }

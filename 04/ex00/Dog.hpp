@@ -5,19 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 09:46:50 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 13:35:18 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/20 18:03:56 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/20 18:33:01 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
-
 #include "Animal.hpp"
 
-class	Dog : public Animal
+class	Dog : public	Animal
 {
 public:
 
@@ -26,10 +23,8 @@ public:
 	Dog& operator=(const Dog& other);
 	~Dog();
 
-	void	makeSound() const;
+protected:
 
 private:
-
-	Brain*	_brain;
 
 };

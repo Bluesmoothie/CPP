@@ -10,17 +10,15 @@ CXXFLAGS		=	-Wall -Wextra -Werror -std=c++98 -MMD -MP $(INCLUDE)
 #			COMMON
 
 BUILD_DIR		=	.build/
-SRC_DIR			=	src/
+SRC_DIR			=	./
 INCLUDE 		=	-Iinclude/ -Iinclude/class
 
 #			SRC
 
 SRC_FILES		=	main			\
 					Animal			\
-					Cat				\
 					Dog				\
-					WrongAnimal		\
-					WrongCat		\
+					Cat				\
 
 SRC 			= 	$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ 			= 	$(addprefix $(BUILD_DIR), $(addsuffix .o, $(SRC_FILES)))

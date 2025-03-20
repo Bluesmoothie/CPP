@@ -1,30 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 09:43:48 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 13:40:38 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/20 18:03:45 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/20 18:34:29 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "poly.hpp"
+#include "Animal.hpp"
 
-int	main()
+Animal::Animal() : _type("Error")
 {
-	Animal	*animals[10];
 
-	for (int i = 0 ; i < 10 ; i++)
-	{
-		if (i < 5)
-			animals[i] = new Animal("Dog");
-		else
-			animals[i] = new Animal("Cat");
-	}
-	animals[1]->newIdea("It's sunny today");
-	for (int i = 0 ; i < 10 ; i++)
-		delete(animals[i]);
-	return (0);
+}
+
+Animal::Animal(const std::string type) : _type(type)
+{
+
+}
+
+Animal::Animal(const Animal& other)
+{
+	this->_type = other._type;
+}
+
+Animal& Animal::operator=(const Animal& other)
+{
+	this->_type = other._type;
+	return (*this);
+}
+
+Animal::~Animal()
+{
+
+}
+
+void	makeSound() const
+{
+	
 }
