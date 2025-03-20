@@ -1,54 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongWrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 18:03:45 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 18:41:48 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 18:43:47 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal() : _type("Error")
+WrongAnimal::WrongAnimal() : _type("Error")
 {
 
 }
 
-Animal::Animal(const std::string type) : _type(type)
+WrongAnimal::WrongAnimal(const std::string type) : _type(type)
 {
 
 }
 
-Animal::Animal(const Animal& other)
+WrongAnimal::WrongAnimal(const WrongAnimal& other)
 {
 	this->_type = other._type;
 }
 
-Animal& Animal::operator=(const Animal& other)
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
 {
 	this->_type = other._type;
 	return (*this);
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
 
 }
 
-void	Animal::makeSound() const
+void	WrongAnimal::makeSound() const
 {
-	if (this->_type == "Dog")
-		std::cout << "Wouaf" << std::endl;
-	else if (this->_type == "Cat")
-		std::cout << "Miaou" << std::endl;
+	if (this->_type == "WrongDog")
+		std::cout << "WrongWouaf" << std::endl;
+	else if (this->_type == "WrongCat")
+		std::cout << "WrongMiaou" << std::endl;
 	else
-		std::cout << "..." << std::endl;
+		std::cout << "Wrong..." << std::endl;
 }
 
-const	std::string	Animal::getType() const
+const	std::string	WrongAnimal::getType() const
 {
 	return (this->_type);
 }

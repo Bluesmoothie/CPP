@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 18:03:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 18:41:25 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/20 18:03:54 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/20 18:33:23 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Dog.hpp"
 
-#include <string>
-#include <iostream>
-
-class	Animal
+Dog::Dog(): Animal("Dog")
 {
-public:
 
-	Animal();
-	Animal(const std::string type);
-	Animal(const Animal& other);
-	Animal& operator=(const Animal& other);
-	~Animal();
+}
 
-	void				makeSound() const;
-	const	std::string	getType() const;
+Dog::Dog(const Dog& other)
+{
+	this->_type = other._type;
+}
 
-protected:
+Dog& Dog::operator=(const Dog& other)
+{
+	this->_type = other._type;
+	return (*this);
+}
 
-	std::string		_type;
+Dog::~Dog()
+{
 
-private:
-
-};
+}

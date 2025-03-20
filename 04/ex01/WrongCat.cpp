@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongWrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 18:03:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 18:41:25 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/20 18:03:42 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/20 18:44:01 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "WrongCat.hpp"
 
-#include <string>
-#include <iostream>
-
-class	Animal
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-public:
 
-	Animal();
-	Animal(const std::string type);
-	Animal(const Animal& other);
-	Animal& operator=(const Animal& other);
-	~Animal();
+}
 
-	void				makeSound() const;
-	const	std::string	getType() const;
+WrongCat::WrongCat(const WrongCat& other)
+{
+	this->_type = other._type;
+}
 
-protected:
+WrongCat& WrongCat::operator=(const WrongCat& other)
+{
+	this->_type = other._type;
+	return (*this);
+}
 
-	std::string		_type;
+WrongCat::~WrongCat()
+{
 
-private:
-
-};
+}

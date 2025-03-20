@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 18:03:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 18:41:25 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/20 18:03:42 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/20 18:33:26 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Cat.hpp"
 
-#include <string>
-#include <iostream>
-
-class	Animal
+Cat::Cat() : Animal("Cat")
 {
-public:
 
-	Animal();
-	Animal(const std::string type);
-	Animal(const Animal& other);
-	Animal& operator=(const Animal& other);
-	~Animal();
+}
 
-	void				makeSound() const;
-	const	std::string	getType() const;
+Cat::Cat(const Cat& other)
+{
+	this->_type = other._type;
+}
 
-protected:
+Cat& Cat::operator=(const Cat& other)
+{
+	this->_type = other._type;
+	return (*this);
+}
 
-	std::string		_type;
+Cat::~Cat()
+{
 
-private:
-
-};
+}
