@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:46:48 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 10:58:01 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 13:00:18 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,9 @@ Dog& Dog::operator=(const Dog& other)
 Dog::~Dog()
 {
 	std::cout << "Default destructor called for Dog" << std::endl;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "Wouaf" << std::endl;
 }

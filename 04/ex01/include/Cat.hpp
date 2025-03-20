@@ -6,12 +6,9 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:46:46 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 11:51:10 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 13:35:23 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef CAT_HPP
-# define CAT_HPP
 
 #pragma once
 
@@ -19,7 +16,6 @@
 #include <string>
 
 #include "Animal.hpp"
-#include "Brain.hpp"
 
 class	Cat : public Animal
 {
@@ -30,10 +26,10 @@ public:
 	Cat& operator=(const Cat& other);
 	~Cat();
 
+	void	makeSound() const;
+
 private:
 
-	Brain*	brain;
+	Brain*	_brain;
 
 };
-
-#endif

@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:44:06 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 11:13:11 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 12:59:51 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Animal::Animal() : type("none")
 	std::cout << "Default constructor called for Animal" << std::endl;
 }
 
-Animal::Animal(std::string type) : type(type)
+Animal::Animal(const std::string type) : type(type)
 {
 	std::cout << "Default constructor called for Animal" << std::endl;
 }
@@ -41,12 +41,7 @@ Animal::~Animal()
 
 void	Animal::makeSound() const
 {
-	if (!this->type.compare("Cat"))
-		std::cout << "Miaou" << std::endl;
-	else if (!this->type.compare("Dog"))
-		std::cout << "Wouaf" << std::endl;
-	else
-		std::cout << "..." << std::endl;
+	std::cout << "..." << std::endl;
 }
 
 std::string	Animal::getType() const

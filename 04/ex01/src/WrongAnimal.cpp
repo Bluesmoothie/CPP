@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 11:15:44 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 11:21:02 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 12:59:09 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ WrongAnimal::WrongAnimal() : type("none")
 	std::cout << "Default constructor called for WrongAnimal" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(std::string type) : type(type)
+WrongAnimal::WrongAnimal(const std::string type) : type(type)
 {
 	std::cout << "Default constructor called for WrongAnimal" << std::endl;
 }
@@ -41,12 +41,7 @@ WrongAnimal::~WrongAnimal()
 
 void	WrongAnimal::makeSound() const
 {
-	if (!this->type.compare("WrongCat"))
-		std::cout << "WrongMiaou" << std::endl;
-	else if (!this->type.compare("WrongDog"))
-		std::cout << "WrongWouaf" << std::endl;
-	else
-		std::cout << "Wrong..." << std::endl;
+	std::cout << "Wrong..." << std::endl;
 }
 
 std::string	WrongAnimal::getType() const

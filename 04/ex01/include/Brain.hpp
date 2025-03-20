@@ -6,12 +6,9 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 11:40:37 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 11:52:22 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 13:45:27 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
 
 #pragma once
 
@@ -27,10 +24,11 @@ public:
 	Brain& operator=(const Brain& other);
 	~Brain();
 
+	void	newIdea(const std::string idea);
+	void	think(const int id) const;
+
 private:
 
 	std::string	ideas[100];
 
 };
-
-#endif

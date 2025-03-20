@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:46:43 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 10:57:44 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 13:00:06 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,9 @@ Cat& Cat::operator=(const Cat& other)
 Cat::~Cat()
 {
 	std::cout << "Default destructor called for Cat" << std::endl;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "Miaou" << std::endl;
 }

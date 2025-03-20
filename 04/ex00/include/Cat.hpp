@@ -6,12 +6,9 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 09:46:46 by ygille            #+#    #+#             */
-/*   Updated: 2025/02/27 09:55:45 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/20 13:07:39 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef CAT_HPP
-# define CAT_HPP
 
 #pragma once
 
@@ -29,8 +26,8 @@ public:
 	Cat& operator=(const Cat& other);
 	~Cat();
 
+	void	makeSound() const;
+
 private:
 
 };
-
-#endif
