@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 18:03:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 18:41:25 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/25 15:33:24 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ public:
 	Animal(const std::string type);
 	Animal(const Animal& other);
 	Animal& operator=(const Animal& other);
-	~Animal();
+	virtual ~Animal();
 
-	void				makeSound() const;
+	virtual void		makeSound() const;
 	const	std::string	getType() const;
 
 protected:

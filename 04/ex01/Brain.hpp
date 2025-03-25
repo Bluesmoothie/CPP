@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 18:03:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 18:43:52 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/25 15:39:20 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/25 15:56:17 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <string>
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 
-class	WrongAnimal
+#define BRAINSIZE	100
+
+class	Brain
 {
 public:
 
-	WrongAnimal();
-	WrongAnimal(const std::string type);
-	WrongAnimal(const WrongAnimal& other);
-	WrongAnimal& operator=(const WrongAnimal& other);
-	~WrongAnimal();
+	Brain();
+	Brain(const Brain& other);
+	Brain& operator=(const Brain& other);
+	~Brain();
 
-	virtual void		makeSound() const;
-	const	std::string	getType() const;
+	void	think() const;
+	void	addIdea(const std::string idea);
 
 protected:
 
-	std::string		_type;
-
 private:
+
+	std::string	_ideas[BRAINSIZE];
+	int			_ideaCount;
 
 };

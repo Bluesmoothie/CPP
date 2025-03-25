@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/20 18:03:47 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/20 18:43:52 by ygille           ###   ########.fr       */
+/*   Created: 2025/03/20 18:03:49 by ygille            #+#    #+#             */
+/*   Updated: 2025/03/25 15:57:04 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
-#include <iostream>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class	WrongAnimal
+class	Cat : public	Animal
 {
 public:
 
-	WrongAnimal();
-	WrongAnimal(const std::string type);
-	WrongAnimal(const WrongAnimal& other);
-	WrongAnimal& operator=(const WrongAnimal& other);
-	~WrongAnimal();
+	Cat();
+	Cat(const Cat& other);
+	Cat& operator=(const Cat& other);
+	~Cat();
 
-	virtual void		makeSound() const;
-	const	std::string	getType() const;
+	void	makeSound() const;
+	void	think() const;
+	void	addIdea(const std::string idea);
 
 protected:
 
-	std::string		_type;
-
 private:
+
+	Brain*	_brain;
 
 };

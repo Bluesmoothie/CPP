@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 18:03:45 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/25 15:36:11 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/25 16:01:34 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,14 @@ void	Animal::makeSound() const
 const	std::string	Animal::getType() const
 {
 	return (this->_type);
+}
+
+void	Animal::think() const
+{
+	
+}
+
+void	Animal::addIdea(const std::string idea)
+{
+	(void) idea;
 }
