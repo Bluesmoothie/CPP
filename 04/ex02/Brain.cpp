@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 15:39:18 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/25 16:15:20 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/26 14:36:05 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ void	Brain::think() const
 {
 	int random;
 
+	if(this->_ideaCount == 0)
+		return ;
 	srand(static_cast<unsigned int>(time(0)));
 	random = rand() % this->_ideaCount;
 	std::cout << "Thinking about " << this->_ideas[random] << std::endl;
