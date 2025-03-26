@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:20:15 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/26 15:33:45 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/26 16:17:17 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	main()
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->use(2, *bob);
+	me->use(3, *bob);
 
 	delete bob;
 	delete me;

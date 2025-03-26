@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:51:21 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/26 15:37:09 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/26 16:12:25 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void				Character::equip(AMateria* m)
 {
 	int	idx = 0;
 
-	while (idx < BAGSIZE && this->_bag[idx] == NULL)
+	while (idx < BAGSIZE && this->_bag[idx] != NULL)
 		idx++;
 	if (idx < BAGSIZE)
 		this->_bag[idx] = m;

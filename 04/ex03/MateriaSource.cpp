@@ -6,7 +6,7 @@
 /*   By: ygille <ygille@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:08:36 by ygille            #+#    #+#             */
-/*   Updated: 2025/03/26 15:39:39 by ygille           ###   ########.fr       */
+/*   Updated: 2025/03/26 16:12:09 by ygille           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void		MateriaSource::learnMateria(AMateria* m)
 {
 	int	idx = 0;
 
-	while (idx < MEMSIZE && this->_memory[idx] == NULL)
+	while (idx < MEMSIZE && this->_memory[idx] != NULL)
 		idx++;
 	if (idx < MEMSIZE)
 		this->_memory[idx] = m;
